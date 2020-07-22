@@ -1,0 +1,11 @@
+server:
+  port: 8070
+
+elasticsearch:
+  user:
+  password:
+  host: 47.95.212.71
+  port: 9200
+
+spring.thymeleaf.content-type: text/html
+spring.thymeleaf.cache: false

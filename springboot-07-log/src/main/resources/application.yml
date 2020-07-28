@@ -1,0 +1,10 @@
+server:
+  port: 8070
+
+
+logging:
+  config: classpath:logback-spring.xml
+
+spring:
+  application:
+    name: test

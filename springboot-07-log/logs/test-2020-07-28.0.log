@@ -1,0 +1,37 @@
+2020-07-28 15:02:12.170 [main] INFO  com.suruomo.log.Springboot07LogApplication - Starting Springboot07LogApplication on suruomo with PID 20296 (D:\Java\Project\springboot-07-log\target\classes started by 苏若墨 in D:\Java\Project\springboot-07-log)
+2020-07-28 15:02:12.178 [main] INFO  com.suruomo.log.Springboot07LogApplication - No active profile set, falling back to default profiles: default
+2020-07-28 15:02:13.010 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8070 (http)
+2020-07-28 15:02:13.018 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8070"]
+2020-07-28 15:02:13.026 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-07-28 15:02:13.026 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-07-28 15:02:13.186 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-07-28 15:02:13.186 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 976 ms
+2020-07-28 15:02:13.402 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-28 15:02:13.530 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8070"]
+2020-07-28 15:02:13.546 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8070 (http) with context path ''
+2020-07-28 15:02:13.554 [main] INFO  com.suruomo.log.Springboot07LogApplication - Started Springboot07LogApplication in 1.786 seconds (JVM running for 3.645)
+2020-07-28 15:02:30.674 [http-nio-8070-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-28 15:02:30.674 [http-nio-8070-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-07-28 15:02:30.682 [http-nio-8070-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 8 ms
+2020-07-28 15:02:30.698 [http-nio-8070-exec-1] INFO  com.suruomo.log.TestComponent - *** TestComponent started ***
+2020-07-28 15:02:30.698 [http-nio-8070-exec-1] INFO  com.suruomo.log.TestComponent -   Process step 0 started.
+2020-07-28 15:02:30.714 [http-nio-8070-exec-1] INFO  com.suruomo.log.TestComponent -   Process step 0 completed.
+2020-07-28 15:02:30.714 [http-nio-8070-exec-1] INFO  com.suruomo.log.TestComponent -   Process step 1 started.
+2020-07-28 15:02:30.730 [http-nio-8070-exec-1] INFO  com.suruomo.log.TestComponent -   Process step 1 completed.
+2020-07-28 15:02:30.730 [http-nio-8070-exec-1] INFO  com.suruomo.log.TestComponent -   Process step 2 started.
+2020-07-28 15:02:30.746 [http-nio-8070-exec-1] INFO  com.suruomo.log.TestComponent -   Process step 2 completed.
+2020-07-28 15:02:30.746 [http-nio-8070-exec-1] INFO  com.suruomo.log.TestComponent -   Process step 3 started.
+2020-07-28 15:02:30.762 [http-nio-8070-exec-1] INFO  com.suruomo.log.TestComponent -   Process step 3 completed.
+2020-07-28 15:02:30.762 [http-nio-8070-exec-1] INFO  com.suruomo.log.TestComponent -   Process step 4 started.
+2020-07-28 15:02:30.778 [http-nio-8070-exec-1] INFO  com.suruomo.log.TestComponent -   Process step 4 completed.
+2020-07-28 15:02:30.778 [http-nio-8070-exec-1] INFO  com.suruomo.log.TestComponent -   Process step 5 started.
+2020-07-28 15:02:30.794 [http-nio-8070-exec-1] INFO  com.suruomo.log.TestComponent -   Process step 5 completed.
+2020-07-28 15:02:30.794 [http-nio-8070-exec-1] INFO  com.suruomo.log.TestComponent -   Process step 6 started.
+2020-07-28 15:02:30.810 [http-nio-8070-exec-1] INFO  com.suruomo.log.TestComponent -   Process step 6 completed.
+2020-07-28 15:02:30.810 [http-nio-8070-exec-1] INFO  com.suruomo.log.TestComponent -   Process step 7 started.
+2020-07-28 15:02:30.826 [http-nio-8070-exec-1] INFO  com.suruomo.log.TestComponent -   Process step 7 completed.
+2020-07-28 15:02:30.826 [http-nio-8070-exec-1] INFO  com.suruomo.log.TestComponent -   Process step 8 started.
+2020-07-28 15:02:30.842 [http-nio-8070-exec-1] INFO  com.suruomo.log.TestComponent -   Process step 8 completed.
+2020-07-28 15:02:30.842 [http-nio-8070-exec-1] INFO  com.suruomo.log.TestComponent -   Process step 9 started.
+2020-07-28 15:02:30.858 [http-nio-8070-exec-1] INFO  com.suruomo.log.TestComponent -   Process step 9 completed.
+2020-07-28 15:02:30.858 [http-nio-8070-exec-1] WARN  com.suruomo.log.TestComponent - *** TestComponent completed with {} ***PT0.16S

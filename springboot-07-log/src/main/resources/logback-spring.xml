@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <contextName>logback-spring-demo</contextName>
+    <!--    1.自定义属性-->
+    <property name="pattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg %n"/>
+    <!--    1.自定义属性：带颜色输出-->
+    <property name="pattern-color"
+              value="%yellow(%d{yyyy-MM-dd HH:mm:ss.SSS}) [%thread] %highlight(%-5level) %green(%logger{50}) - %highlight(%msg) %n"/>
+    <!--    日志存放目录-->
+    <property name="LOG_HOME" value="logs"/>
+    <!--日志文件名称：这里spring.application.name表示工程名称-->
+    <springProperty scope="context" name="APP_NAME" source="spring.application.name"/>
+
+    <!-- 控制台输出 -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>${pattern}</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 控制台输出-带颜色 -->
+    <appender name="CONSOLE-WITH-COLOR" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>${pattern-color}</pattern>
+        </encoder>
+    </appender>
+
+    <!--按照每天生成日志文件-->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!--设置策略-->
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <!--日志文件路径：这里%d{yyyyMMdd}表示按天分类日志-->
+            <FileNamePattern>${LOG_HOME}/${APP_NAME}-%d{yyyy-MM-dd}.%i.log</FileNamePattern>
+            <!--日志保留天数-->
+            <MaxHistory>15</MaxHistory>
+            <MaxFileSize>200MB</MaxFileSize>
+        </rollingPolicy>
+        <!--设置格式-->
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度%msg：日志消息，%n是换行符-->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n</pattern>
+            <!-- 或者使用默认配置 -->
+            <!--<pattern>${FILE_LOG_PATTERN}</pattern>-->
+            <charset>utf8</charset>
+        </encoder>
+    </appender>
+
+    <!--配置启用哪种appender：带颜色控制台输出+日志文件输出-->
+    <root level="INFO">
+        <appender-ref ref="CONSOLE-WITH-COLOR"/>
+        <appender-ref ref="FILE"/>
+    </root>
+    <!-- logger节点可以指定具体包或类的日志配置 -->
+    <!-- name属性为必选，指定要配置的包或类，level和additivity为可选，有缺省值 -->
+    <!-- level表示日志级别，这里配置info级别，表示info及以上级别的日志被输出 -->
+    <!-- additivity表示日志是否传递到上一级，默认为true -->
+    <logger name="com.suruomo.log.TestComponent" level="info" additivity="false">
+        <appender-ref ref="FILE"/>
+        <appender-ref ref="CONSOLE-WITH-COLOR"/>
+    </logger>
+
+</configuration>

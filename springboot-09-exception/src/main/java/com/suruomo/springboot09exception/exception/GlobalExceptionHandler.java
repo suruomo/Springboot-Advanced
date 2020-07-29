@@ -2,6 +2,7 @@ package com.suruomo.springboot09exception.exception;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -29,6 +30,7 @@ public class GlobalExceptionHandler {
      * @throws Exception
      */
     @ExceptionHandler(value = IllegalArgumentException.class)
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     public ModelAndView illegalArgumentExceptionHandler(HttpServletRequest request) throws Exception {
         log.error("Requst URL : {}，Exception : {}", request.getRequestURL(),illegalArgumentException.getMessage());
         ModelAndView mv = new ModelAndView();
@@ -43,6 +45,7 @@ public class GlobalExceptionHandler {
      * @param request
      * @return
      */
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     @ExceptionHandler(value = NullPointerException.class)
     public ModelAndView nullPointerExceptionHandler(HttpServletRequest request) {
         log.error("Requst URL : {}，Exception : {}", request.getRequestURL(),NullPointerException.getMessage());

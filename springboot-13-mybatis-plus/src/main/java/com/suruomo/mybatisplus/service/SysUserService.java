@@ -1,7 +1,7 @@
 package com.suruomo.mybatisplus.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.suruomo.mybatisplus.model.SysUser;
+import com.suruomo.mybatisplus.entity.SysUser;
 
 /**
  * @Author: suruomo

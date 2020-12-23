@@ -1,8 +1,9 @@
-package com.suruomo.mybatisplus.service;
+package com.suruomo.mybatisplus.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.suruomo.mybatisplus.mapper.SysUserMapper;
-import com.suruomo.mybatisplus.model.SysUser;
+import com.suruomo.mybatisplus.entity.SysUser;
+import com.suruomo.mybatisplus.service.SysUserService;
 import org.springframework.stereotype.Service;
 
 /**

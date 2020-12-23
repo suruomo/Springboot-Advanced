@@ -1,8 +1,6 @@
-package com.suruomo.mybatisplus.model;
+package com.suruomo.mybatisplus.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
 import lombok.Data;
 
 import java.util.Date;
@@ -17,6 +15,8 @@ import java.util.Date;
 public class SysUser {
     /**
      * 登录账号
+     * type = IdType.INPUT表示主键输入
+     * 改为AUTO为自增
      */
     @TableId(type = IdType.INPUT)
     private String userId;
@@ -73,7 +73,9 @@ public class SysUser {
 
     /**
      * 创建时间
+     * 时间自动填充
      */
+    @TableField(fill = FieldFill.INSERT)
     private Date createTime;
 
     /**
@@ -83,6 +85,8 @@ public class SysUser {
 
     /**
      * 更新时间
+     * 时间自动修改
      */
+    @TableField(fill = FieldFill.INSERT_UPDATE)
     private Date updateTime;
 }

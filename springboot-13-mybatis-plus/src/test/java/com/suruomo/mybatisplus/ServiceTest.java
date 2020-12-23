@@ -1,6 +1,6 @@
 package com.suruomo.mybatisplus;
 
-import com.suruomo.mybatisplus.model.SysUser;
+import com.suruomo.mybatisplus.entity.SysUser;
 import com.suruomo.mybatisplus.service.SysUserService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
